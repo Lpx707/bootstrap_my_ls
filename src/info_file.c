@@ -7,7 +7,6 @@
 
 #include "../include/my.h"
 
-
 int main(int argc, char *argv[], struct dirent *entry)
 {
     struct stat info;
@@ -20,7 +19,7 @@ int main(int argc, char *argv[], struct dirent *entry)
             exit(EXIT_FAILURE);
         }
         printf("Name: %s\n");
-        check_type(info);
+        check_regular_file(info);
         printf("Inode: %d\n", (int)info.st_ino);
         printf("Hard Link: %d\n", (int)info.st_nlink);
         printf("Size: %d\n", (int)info.st_size);
