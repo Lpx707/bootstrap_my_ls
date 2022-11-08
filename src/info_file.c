@@ -23,7 +23,7 @@ int main(int argc, char *argv[], struct dirent *entry)
         printf("Inode: %d\n", (int)info.st_ino);
         printf("Hard Link: %d\n", (int)info.st_nlink);
         printf("Size: %d\n", (int)info.st_size);
-        printf("Allocated Space:  %lld\n", (long long)info.st_blocks);
+        printf("Allocated Space:  %lld\n", (long long)info.st_blksize);
         check_min(info);
         check_maj(info);
         printf("UID: %d\n", (int)info.st_uid);
